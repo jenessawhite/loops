@@ -5,26 +5,26 @@
  * and returns the largest of them. Use the if-then-else construct available in Javascript.
  */
 
- function max(a, b){
-     // YOUR CODE HERE
-     if (isNaN(a,b) === false) {
-       return Math.max(a,b);
-     } else if (isNaN(a) === true && isNaN(b) === false) {
-       return b;
-     } else if (isNaN(a) === false && isNaN(b) === true) {
-       return a;
-     } else if (isNaN(a,b) === true) {
-       console.log(isNaN(a,b));
-     }
-
- }
-
-console.assert(max(1,3) === 3);
-console.assert(max(0,3) === 3);
-console.assert(max(10,3) === 10);
-console.assert(max(-1,-3) === -1);
-console.assert(max("aaa",0) === 0);
-console.assert(isNaN(max("aaa","bbb")));
+//  function max(a, b){
+//      // YOUR CODE HERE
+//      if (!isNaN(a) && !isNaN(b)) {
+//        return Math.max(a,b);
+//      } else if (isNaN(a) && !isNaN(b)) {
+//        return b;
+//      } else if (!isNaN(a) && isNaN(b)) {
+//        return a;
+//      } else if (isNaN(a) && isNaN(b)) {
+//        return NaN;
+//      }
+//
+//  }
+//
+// console.assert(max(1,3) === 3);
+// console.assert(max(0,3) === 3);
+// console.assert(max(10,3) === 10);
+// console.assert(max(-1,-3) === -1);
+// console.assert(max("aaa",0) === 0);
+// console.assert(isNaN(max("aaa","bbb")));
 
 // /**
 //  * PART 1
@@ -35,6 +35,24 @@ console.assert(isNaN(max("aaa","bbb")));
 //
 // function maxOfThree(a, b, c){
 //     // YOUR CODE HERE
+//     if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
+//       return Math.max(a,b,c);
+//     } else if (isNaN(a) && !isNaN(b) && !isNaN(c)) {
+//       return Math.max(b,c);
+//     }  else if (!isNaN(a) && isNaN(b) && !isNaN(c)) {
+//       return Math.max(a,c);
+//     } else if (!isNaN(a) && !isNaN(b) && isNaN(c)) {
+//       return Math.max(a,b);
+//     } else if (!isNaN(a) && isNaN(b) && isNaN(c)) {
+//       return a;
+//     } else if (isNaN(a) && !isNaN(b) && isNaN(c)) {
+//       return b;
+//     } else if (isNaN(a) && isNaN(b) && !isNaN(c)) {
+//       return c;
+//     } else if (isNaN(a) && isNaN(b) && isNaN(c)) {
+//       return NaN;
+//     }
+//
 // }
 //
 // console.assert(maxOfThree(1,3,2) === 3);
@@ -51,16 +69,28 @@ console.assert(isNaN(max("aaa","bbb")));
 //  * and returns true if it is a vowel, false otherwise.
 //  */
 //
-// function isVowel(char){
-//     // YOUR CODE HERE
-// }
-//
-// console.assert(isVowel(0) === false);
-// console.assert(isVowel("B") === false);
-// console.assert(isVowel("b") === false);
-// console.assert(isVowel("a") === true);
-// console.assert(isVowel("E") === true);
-//
+function isVowel(character) {
+    if (!isNaN(character)) {
+        return false;
+    } else if (character.length > 1) {
+        return "character length greater than 1";
+    } else {
+        var testChar = character.toLowerCase();
+        if ('aeiou'.indexOf(testChar) > -1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+console.assert(isVowel(0) === false);
+console.assert(isVowel("B") === false);
+console.assert(isVowel("b") === false);
+console.log(isVowel('a'));
+console.assert(isVowel("a") === true);
+console.assert(isVowel("E") === true);
+
 // /**
 //  * PART 3
 //  *
