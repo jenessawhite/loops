@@ -133,17 +133,17 @@
 //  * string "books".
 //  */
 //
-function reverse(str){
-    // YOUR CODE HERE
-    var reversedStr = "";
-for (var i = str.length-1; i >= 0; i--) {
-  reversedStr += str[i];
-}
-return reversedStr;
-}
-
-console.assert(reverse("books") === "skoob")
-console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew")
+// function reverse(str){
+//     // YOUR CODE HERE
+//     var reversedStr = "";
+// for (var i = str.length-1; i >= 0; i--) {
+//   reversedStr += str[i];
+// }
+// return reversedStr;
+// }
+//
+// console.assert(reverse("books") === "skoob")
+// console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew")
 //
 // /**
 //  * Part 5
@@ -154,9 +154,17 @@ console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew
 //  * i.e. findLongestWord("book dogs") should return "book"
 //  */
 //
-// function findLongestWord(sentence){
-//     // YOUR CODE HERE
-// }
+function findLongestWord(sentence) {
+    // YOUR CODE HERE
+    var strSplit = sentence.split(' ');
+    var longestWord = 0;
+    for (var i = 0; i < strSplit.length; i++) {
+        if (strSplit[i].length > longestWord) {
+            longestWord = strSplit[i].length;
+        }
+    }
+    return longestWord;
+}
 //
 // console.assert(findLongestWord("book dogs") === "book")
 // console.assert(findLongestWord("don't mess with Texas") === "Texas")
