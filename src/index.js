@@ -103,26 +103,26 @@
 //
 //  */
 //
-function rovarspraket(word){
-    var string = word.toLowerCase();
-    var vowels = ["a", "e", "i", "o", "u", " "];
-    var text = "";
-    for (i = 0; i < string.length; i++) {
-       var current = string.charAt(i);
-      if (vowels.indexOf(current) != -1) {
-          text = (text + (current));
-      } else {
-          text = (text + (current + "o" + current));
-      }
-    }
-    return text;
-}
-
-console.assert(rovarspraket("a") === "a")
-console.assert(rovarspraket("b") === "bob")
-console.assert(rovarspraket("cat") === "cocatot")
-console.assert(rovarspraket("javascript") === "jojavovasoscocroripoptot")
-console.assert(rovarspraket(0) === "0")
+// function rovarspraket(word){
+//     var string = word.toLowerCase();
+//     var vowels = ["a", "e", "i", "o", "u", " "];
+//     var text = "";
+//     for (i = 0; i < string.length; i++) {
+//        var current = string.charAt(i);
+//       if (vowels.indexOf(current) != -1) {
+//           text = (text + (current));
+//       } else {
+//           text = (text + (current + "o" + current));
+//       }
+//     }
+//     return text;
+// }
+//
+// console.assert(rovarspraket("a") === "a")
+// console.assert(rovarspraket("b") === "bob")
+// console.assert(rovarspraket("cat") === "cocatot")
+// console.assert(rovarspraket("javascript") === "jojavovasoscocroripoptot")
+// console.assert(rovarspraket(0) === "0")
 //
 // /**
 //  * Part 4
@@ -133,12 +133,17 @@ console.assert(rovarspraket(0) === "0")
 //  * string "books".
 //  */
 //
-// function reverse(str){
-//     // YOUR CODE HERE
-// }
-//
-// console.assert(reverse("books") === "skoob")
-// console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew")
+function reverse(str){
+    // YOUR CODE HERE
+    var reversedStr = "";
+for (var i = str.length-1; i >= 0; i--) {
+  reversedStr += str[i];
+}
+return reversedStr;
+}
+
+console.assert(reverse("books") === "skoob")
+console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew")
 //
 // /**
 //  * Part 5
