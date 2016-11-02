@@ -69,28 +69,28 @@
 //  * and returns true if it is a vowel, false otherwise.
 //  */
 //
-function isVowel(character) {
-    if (!isNaN(character)) {
-        return false;
-    } else if (character.length > 1) {
-        return "character length greater than 1";
-    } else {
-        var testChar = character.toLowerCase();
-        if ('aeiou'.indexOf(testChar) > -1) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-}
-
-console.assert(isVowel(0) === false);
-console.assert(isVowel("B") === false);
-console.assert(isVowel("b") === false);
-console.log(isVowel('a'));
-console.assert(isVowel("a") === true);
-console.assert(isVowel("E") === true);
-
+// function isVowel(character) {
+//     if (!isNaN(character)) {
+//         return false;
+//     } else if (character.length > 1) {
+//         return "character length greater than 1";
+//     } else {
+//         var testChar = character.toLowerCase();
+//         if ('aeiou'.indexOf(testChar) > -1) {
+//             return true;
+//         } else {
+//             return false;
+//         }
+//     }
+// }
+//
+// console.assert(isVowel(0) === false);
+// console.assert(isVowel("B") === false);
+// console.assert(isVowel("b") === false);
+// console.log(isVowel('a'));
+// console.assert(isVowel("a") === true);
+// console.assert(isVowel("E") === true);
+//
 // /**
 //  * PART 3
 //  *
@@ -103,15 +103,26 @@ console.assert(isVowel("E") === true);
 //
 //  */
 //
-// function rovarspraket(in){
-//     // YOUR CODE HERE
-// }
-//
-// console.assert(rovarspraket("a") === "a")
-// console.assert(rovarspraket("b") === "bob")
-// console.assert(rovarspraket("cat") === "cocatot")
-// console.assert(rovarspraket("javascript") === "jojavovasoscocroripoptot")
-// console.assert(rovarspraket(0) === "0")
+function rovarspraket(word){
+    var string = word.toLowerCase();
+    var vowels = ["a", "e", "i", "o", "u", " "];
+    var text = "";
+    for (i = 0; i < string.length; i++) {
+       var current = string.charAt(i);
+      if (vowels.indexOf(current) != -1) {
+          text = (text + (current));
+      } else {
+          text = (text + (current + "o" + current));
+      }
+    }
+    return text;
+}
+
+console.assert(rovarspraket("a") === "a")
+console.assert(rovarspraket("b") === "bob")
+console.assert(rovarspraket("cat") === "cocatot")
+console.assert(rovarspraket("javascript") === "jojavovasoscocroripoptot")
+console.assert(rovarspraket(0) === "0")
 //
 // /**
 //  * Part 4
