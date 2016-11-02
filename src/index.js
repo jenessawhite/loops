@@ -5,26 +5,26 @@
  * and returns the largest of them. Use the if-then-else construct available in Javascript.
  */
 
-//  function max(a, b){
-//      // YOUR CODE HERE
-//      if (!isNaN(a) && !isNaN(b)) {
-//        return Math.max(a,b);
-//      } else if (isNaN(a) && !isNaN(b)) {
-//        return b;
-//      } else if (!isNaN(a) && isNaN(b)) {
-//        return a;
-//      } else if (isNaN(a) && isNaN(b)) {
-//        return NaN;
-//      }
-//
-//  }
-//
-// console.assert(max(1,3) === 3);
-// console.assert(max(0,3) === 3);
-// console.assert(max(10,3) === 10);
-// console.assert(max(-1,-3) === -1);
-// console.assert(max("aaa",0) === 0);
-// console.assert(isNaN(max("aaa","bbb")));
+ function max(a, b){
+     // YOUR CODE HERE
+     if (!isNaN(a) && !isNaN(b)) {
+       return Math.max(a,b);
+     } else if (isNaN(a) && !isNaN(b)) {
+       return b;
+     } else if (!isNaN(a) && isNaN(b)) {
+       return a;
+     } else if (isNaN(a) && isNaN(b)) {
+       return NaN;
+     }
+
+ }
+
+console.assert(max(1,3) === 3);
+console.assert(max(0,3) === 3);
+console.assert(max(10,3) === 10);
+console.assert(max(-1,-3) === -1);
+console.assert(max("aaa",0) === 0);
+console.assert(isNaN(max("aaa","bbb")));
 
 // /**
 //  * PART 1
@@ -33,35 +33,35 @@
 //  * numbers as arguments and returns the largest of them.
 //  */
 //
-// function maxOfThree(a, b, c){
-//     // YOUR CODE HERE
-//     if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
-//       return Math.max(a,b,c);
-//     } else if (isNaN(a) && !isNaN(b) && !isNaN(c)) {
-//       return Math.max(b,c);
-//     }  else if (!isNaN(a) && isNaN(b) && !isNaN(c)) {
-//       return Math.max(a,c);
-//     } else if (!isNaN(a) && !isNaN(b) && isNaN(c)) {
-//       return Math.max(a,b);
-//     } else if (!isNaN(a) && isNaN(b) && isNaN(c)) {
-//       return a;
-//     } else if (isNaN(a) && !isNaN(b) && isNaN(c)) {
-//       return b;
-//     } else if (isNaN(a) && isNaN(b) && !isNaN(c)) {
-//       return c;
-//     } else if (isNaN(a) && isNaN(b) && isNaN(c)) {
-//       return NaN;
-//     }
-//
-// }
-//
-// console.assert(maxOfThree(1,3,2) === 3);
-// console.assert(maxOfThree(0,3,-1) === 3);
-// console.assert(maxOfThree(10,3,50) === 50);
-// console.assert(maxOfThree(-1,-3,-10) === -1);
-// console.assert(maxOfThree("aaa",0,1) === 1);
-// console.assert(isNaN(maxOfThree("aaa","bbb","ccc")));
-//
+function maxOfThree(a, b, c){
+    // YOUR CODE HERE
+    if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
+      return Math.max(a,b,c);
+    } else if (isNaN(a) && !isNaN(b) && !isNaN(c)) {
+      return Math.max(b,c);
+    }  else if (!isNaN(a) && isNaN(b) && !isNaN(c)) {
+      return Math.max(a,c);
+    } else if (!isNaN(a) && !isNaN(b) && isNaN(c)) {
+      return Math.max(a,b);
+    } else if (!isNaN(a) && isNaN(b) && isNaN(c)) {
+      return a;
+    } else if (isNaN(a) && !isNaN(b) && isNaN(c)) {
+      return b;
+    } else if (isNaN(a) && isNaN(b) && !isNaN(c)) {
+      return c;
+    } else if (isNaN(a) && isNaN(b) && isNaN(c)) {
+      return NaN;
+    }
+
+}
+
+console.assert(maxOfThree(1,3,2) === 3);
+console.assert(maxOfThree(0,3,-1) === 3);
+console.assert(maxOfThree(10,3,50) === 50);
+console.assert(maxOfThree(-1,-3,-10) === -1);
+console.assert(maxOfThree("aaa",0,1) === 1);
+console.assert(isNaN(maxOfThree("aaa","bbb","ccc")));
+
 // /**
 //  * PART 2
 //  *
@@ -69,28 +69,28 @@
 //  * and returns true if it is a vowel, false otherwise.
 //  */
 //
-// function isVowel(character) {
-//     if (!isNaN(character)) {
-//         return false;
-//     } else if (character.length > 1) {
-//         return "character length greater than 1";
-//     } else {
-//         var testChar = character.toLowerCase();
-//         if ('aeiou'.indexOf(testChar) > -1) {
-//             return true;
-//         } else {
-//             return false;
-//         }
-//     }
-// }
-//
-// console.assert(isVowel(0) === false);
-// console.assert(isVowel("B") === false);
-// console.assert(isVowel("b") === false);
-// console.log(isVowel('a'));
-// console.assert(isVowel("a") === true);
-// console.assert(isVowel("E") === true);
-//
+function isVowel(character) {
+    if (!isNaN(character)) {
+        return false;
+    } else if (character.length > 1) {
+        return "character length greater than 1";
+    } else {
+        var testChar = character.toLowerCase();
+        if ('aeiou'.indexOf(testChar) > -1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+console.assert(isVowel(0) === false);
+console.assert(isVowel("B") === false);
+console.assert(isVowel("b") === false);
+console.log(isVowel('a'));
+console.assert(isVowel("a") === true);
+console.assert(isVowel("E") === true);
+
 // /**
 //  * PART 3
 //  *
@@ -103,26 +103,26 @@
 //
 //  */
 //
-// function rovarspraket(word){
-//     var string = word.toLowerCase();
-//     var vowels = ["a", "e", "i", "o", "u", " "];
-//     var text = "";
-//     for (i = 0; i < string.length; i++) {
-//        var current = string.charAt(i);
-//       if (vowels.indexOf(current) != -1) {
-//           text = (text + (current));
-//       } else {
-//           text = (text + (current + "o" + current));
-//       }
-//     }
-//     return text;
-// }
-//
-// console.assert(rovarspraket("a") === "a")
-// console.assert(rovarspraket("b") === "bob")
-// console.assert(rovarspraket("cat") === "cocatot")
-// console.assert(rovarspraket("javascript") === "jojavovasoscocroripoptot")
-// console.assert(rovarspraket(0) === "0")
+function rovarspraket(word){
+    var string = word.toLowerCase();
+    var vowels = ["a", "e", "i", "o", "u", " "];
+    var text = "";
+    for (i = 0; i < string.length; i++) {
+       var current = string.charAt(i);
+      if (vowels.indexOf(current) != -1) {
+          text = (text + (current));
+      } else {
+          text = (text + (current + "o" + current));
+      }
+    }
+    return text;
+}
+
+console.assert(rovarspraket("a") === "a")
+console.assert(rovarspraket("b") === "bob")
+console.assert(rovarspraket("cat") === "cocatot")
+console.assert(rovarspraket("javascript") === "jojavovasoscocroripoptot")
+console.assert(rovarspraket(0) === "0")
 //
 // /**
 //  * Part 4
@@ -133,17 +133,17 @@
 //  * string "books".
 //  */
 //
-// function reverse(str){
-//     // YOUR CODE HERE
-//     var reversedStr = "";
-// for (var i = str.length-1; i >= 0; i--) {
-//   reversedStr += str[i];
-// }
-// return reversedStr;
-// }
-//
-// console.assert(reverse("books") === "skoob")
-// console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew")
+function reverse(str){
+    // YOUR CODE HERE
+    var reversedStr = "";
+for (var i = str.length-1; i >= 0; i--) {
+  reversedStr += str[i];
+}
+return reversedStr;
+}
+
+console.assert(reverse("books") === "skoob")
+console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew")
 //
 // /**
 //  * Part 5
